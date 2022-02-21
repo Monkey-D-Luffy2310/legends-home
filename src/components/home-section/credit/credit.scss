@@ -1,0 +1,25 @@
+@import '../../../scss';
+
+.credit {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  @include flex(center, center);
+  video {
+    position: absolute;
+    width: 100%;
+  }
+  .content {
+    position: relative;
+    .title {
+      text-align: center;
+      h2 {
+        text-transform: uppercase;
+      }
+    }
+    .button .btn ~ .btn {
+      margin-left: 1rem;
+    }
+  }
+}

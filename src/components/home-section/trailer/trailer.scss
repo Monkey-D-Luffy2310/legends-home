@@ -1,0 +1,35 @@
+@import '../../../scss';
+
+.trailer {
+  &-content {
+    @include flex(flex-start , center);
+    overflow: hidden;
+    height: 100%;
+    .image {
+      width: 50%;
+      height: 100%;
+      opacity: 0;
+      transition: all 1s;
+      transform: translateX(-200px);
+      img {
+        height: 100%;
+      }
+    }
+    .content {
+      width: 50%;
+      transform: translateX(200px);
+      opacity: 0;
+      transition: all 1s;
+    }
+    .video {
+      margin-top: 2rem;
+    }
+  }
+  &.active {
+    .image, .content {
+      transform: translateX(0);
+      transition-delay: 0.5s;
+      opacity: 1;
+    }
+  }
+}

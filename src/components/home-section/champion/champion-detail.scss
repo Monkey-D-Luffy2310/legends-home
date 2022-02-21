@@ -1,0 +1,52 @@
+@import '../../../scss';
+
+.champion-detail {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 101;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.5s;
+  visibility: hidden;
+  @include flex(flex-start, flex-end);
+  &-content {
+    padding-top: 2rem;
+    position: relative;
+    width: 60%;
+    .nickName {
+      font-size: 1rem;
+    }
+    .name {
+      font-size: 5rem;
+      text-transform: uppercase;      
+    }
+    .desc {
+      margin: 1rem 0;
+      width: 50%;
+      border-left: 2px solid $main-color;
+      padding-left: 1rem;
+    }
+    .video {
+      margin-top: 1rem;
+    }
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .close-icon {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    transition: transform 0.5s;
+    cursor: pointer;
+    img {
+      width: 3rem;
+    }
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+}

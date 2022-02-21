@@ -1,0 +1,23 @@
+@import "../../scss";
+
+.section {
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  transition: visibility 0.5s;
+  &.active {
+    visibility: visible;
+  }
+  &.active &-content {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.3s;
+  }
+  &-content {
+    height: 100%;
+    padding-top: $header-height;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: transform 1s, opacity 0.5s, height 0.5s;
+  }
+}

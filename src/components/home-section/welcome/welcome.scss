@@ -1,0 +1,26 @@
+@import '../../../scss';
+
+.welcome {
+  &-content {
+    overflow: hidden;
+    @include flex(flex-start, flex-end);
+  }
+  &-left, &-right {
+    width: 50%;
+    height: 100%;
+  }
+  &-left {
+    padding-left: 15rem;
+    & .button .btn ~ .btn {
+      margin-left: 1rem;
+    }
+  }
+  &-right {
+    margin-top: -5rem;
+  }
+  &-animate {
+    height: 915px;
+    width: 915px;
+    overflow: hidden;
+  }
+}
