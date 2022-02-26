@@ -7,7 +7,9 @@ const Credit = () => {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    videoRef.current.play();
+    document.body.addEventListener("mouseover", function() {
+      videoRef.current.play();
+    })
   }, []);
 
   return (
